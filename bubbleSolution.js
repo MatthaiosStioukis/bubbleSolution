@@ -41,9 +41,11 @@ function getBestResult(scores) {
 }
 // Here we created a function that will filter from the winningScore array the cheapest one and return it.
 function ultimateWinnerByCost() {
-    var ultimateWinner = 0;
+    var x = 100;
+    var ultimateWinner;
     for (var i = 0; i < winningScores.length; i++) {
-        if (ultimateWinner < costs[winningScores[i]]) {
+        if (x > costs[winningScores[i]]) {
+            x = costs[winningScores[i]];
             ultimateWinner = winningScores[i];
         }
     }
